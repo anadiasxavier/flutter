@@ -8,6 +8,8 @@ void main(){
   print("Digite a sua velocidade: ");
   double velocidade = double.parse(stdin.readLineSync()!);
 
+
+// if e else para verificar as velocidades
   if (velocidade > 100){
       print("Infração grave");
   }
@@ -29,9 +31,30 @@ void main(){
   print("Digite a sua opção: ");
   int opcao = int.parse(stdin.readLineSync()!);
 
-  double multa = 2.000;
+  double multa = 2000.0;
+  double  valorFinal = multa;
 
-  switch ()
+// switch para verificar a opcao e retornar os valores da multa
+  switch (opcao){
+    case 1:
+      valorFinal = multa * 0.90;
+      print("$nome , sua conta ficou de ${valorFinal.toStringAsFixed(2)}");
+      break;
+    case 2:
+      valorFinal = multa /2;
+      print("$nome , sua conta ficou duas parcelas de ${valorFinal.toStringAsFixed(2)}");
+      break;
+    case 3:
+      valorFinal = multa * 1.10;
+      double parcela = valorFinal / 3;
+      print("$nome , sua conta ficou de ${valorFinal.toStringAsFixed(2)}");
+      print("parcelado em 3x ficou de ${parcela.toStringAsFixed(2)}");
+      break;
+
+    default:
+    print("Opção invalida");
+    break;
+  }
 
 
   
