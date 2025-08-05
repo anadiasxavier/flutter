@@ -9,7 +9,7 @@ void main(){
   double velocidade = double.parse(stdin.readLineSync()!);
 
 
-// if e else para verificar as velocidades
+// if e else para as velocidades
   if (velocidade > 100){
       print("Infração grave");
   }
@@ -34,7 +34,7 @@ void main(){
   double multa = 2000.0;
   double  valorFinal = multa;
 
-// switch para verificar a opcao e retornar os valores da multa
+// switch para a opcao e retornar os valores da multa
   switch (opcao){
     case 1:
       valorFinal = multa * 0.90;
